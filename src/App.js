@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Route,Switch,Redirect,withRouter } from 'react-router-dom';
+import Home from './components/home/home';
+import Category from './components/category/category';
+import Cart from './components/cart/cart';
+import My from './components/my/my';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,10 +25,20 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
+        <Switch>
+          <Route path='/home' component={Home} />
+          <Route path='/catrgory' component={Category} />
+          <Route path='/cart' component={Cart} />
+          <Route path='/my' component={My} />
+          <Redirect from="/" to="/home" />
+        </Switch>
       </div>
     );
   }
 }
+
+// 利用withRouter高阶组件包装App组件
+App = withRouter(App);
 
 export default App;
