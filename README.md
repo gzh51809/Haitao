@@ -1,3 +1,5 @@
+英超海淘App - 为用户提供一个便捷的海淘购物平台  - 江亲国
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import './components/style/common/reset.css';
 
 import { Route,Switch,Redirect,withRouter } from 'react-router-dom';
 import Home from './components/home/home';
 import Category from './components/category/category';
 import Cart from './components/cart/cart';
 import My from './components/my/my';
+import Topsearch from './components/common/topsearch';
+import Footer from './components/common/footer';
 
 class App extends Component {
   render() {
@@ -26,9 +29,11 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
+        <Topsearch></Topsearch>
+        <Footer props={this.props}></Footer>
         <Switch>
           <Route path='/home' component={Home} />
-          <Route path='/catrgory' component={Category} />
+          <Route path='/category' component={Category} />
           <Route path='/cart' component={Cart} />
           <Route path='/my' component={My} />
           <Redirect from="/" to="/home" />

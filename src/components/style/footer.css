@@ -1,0 +1,17 @@
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1.30666667rem;
+  display: flex;
+  align-items: center;
+}
+.foot div {
+  flex: 1;
+  font-size: 0.26666667rem;
+  display: flex;
+  flex-direction: column;
+}
+.foot .active {
+  color: #ff6854;
+}
