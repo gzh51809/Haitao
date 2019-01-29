@@ -120,15 +120,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "proxy": {
-    "/api": {
-      "target": "https://webapi.51taouk.com/",
-      "ws": true,
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/api": " "
-      }
-    }
   }
 }

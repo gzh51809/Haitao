@@ -1,0 +1,30 @@
+.header {
+  height: 1.06666667rem;
+  padding-top: 0.16rem;
+}
+.header .tab {
+  width: 6.82666667rem;
+  height: 0.74666667rem;
+  border: 1px solid #ffb5ac;
+  margin: auto;
+  border-radius: 0.13333333rem;
+}
+.header .tab div {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  font-size: 0.32rem;
+  line-height: 0.69333333rem;
+}
+.header .tab div:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.header .tab div:nth-child(2) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.header .tab .active {
+  background-color: #ff6854;
+  color: #fff;
+}

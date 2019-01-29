@@ -15,7 +15,7 @@ class Home extends React.Component {
         }
     }
     componentDidMount(){
-        axios.get('https://webapi.51taouk.com/api/content/getAllContentsByPage/app_home')
+        axios.get('https://webapi.51taouk.com/api/content/getAllContentsByPage/app')
         // axios.post('https://m.51taouk.com/api/category')
         .then((res)=>{
             console.log(res);

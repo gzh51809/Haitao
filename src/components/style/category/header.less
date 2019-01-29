@@ -1,0 +1,32 @@
+@import url(../common/main.less);
+
+.header{
+    .h(40);
+    .padding-t(6);
+    .tab{
+        .w(256);
+        .h(28);
+        border: 1px solid #ffb5ac;
+        margin: auto;
+        .br(5);
+        div{
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            .fs(12);
+            .lh(26);
+        }
+        div:first-child{
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        div:nth-child(2){
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .active{
+            background-color: #ff6854;
+            color: #fff;
+        }
+    }
+}

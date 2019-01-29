@@ -94,3 +94,6 @@ body {
 .fr {
   float: right;
 }
+.hide {
+  display: none;
+}
