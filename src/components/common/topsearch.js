@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 
 import '../style/topsearch.css'
 
@@ -13,7 +14,10 @@ class Topsearch extends React.Component {
     render() {
         return (
             <div className="search">
-                <div></div>
+                <div>
+                    <Icon type="search" />
+                    <span>搜索美国热卖</span>
+                </div>
             </div>
         )
     }

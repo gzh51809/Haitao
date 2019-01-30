@@ -13,6 +13,10 @@
   display: flex;
   flex-direction: column;
 }
+.foot div i {
+  height: 0.53333333rem;
+  font-size: 0.53333333rem;
+}
 .foot .active {
   color: #ff6854;
 }

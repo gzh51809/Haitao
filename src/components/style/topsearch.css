@@ -6,6 +6,7 @@
 }
 .search div {
   height: 0.74666667rem;
+  line-height: 0.74666667rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   margin-left: 0.42666667rem;
@@ -13,4 +14,12 @@
   padding-left: 0.26666667rem;
   background-color: #f5f5f5;
   border-radius: 5px;
+  text-align: left;
+}
+.search div i {
+  font-size: 0.42666667rem;
+}
+.search div span {
+  margin-left: 0.13333333rem;
+  font-size: 0.32rem;
 }

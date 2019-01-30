@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Top from './top';
+import Items from './items';
+
 class Cart extends React.Component {
     constructor() {
         super();
@@ -10,7 +13,8 @@ class Cart extends React.Component {
     render() {
         return (
             <div>
-                <h3>购物车</h3>
+                <Top></Top>
+                <Items></Items>
             </div>
         )
     }

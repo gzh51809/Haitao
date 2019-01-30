@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 
 import '../style/footer.css'
 
@@ -9,19 +10,23 @@ class Footer extends React.Component {
             list:[
                 {
                     name: '首页',
-                    path: '/home'
+                    path: '/home',
+                    type: 'home'
                 },
                 {
                     name: '分类',
-                    path: '/category'
+                    path: '/category',
+                    type: 'bars'
                 },
                 {
                     name: '购物车',
-                    path: '/cart'
+                    path: '/cart',
+                    type: 'shopping-cart'
                 },
                 {
                     name: '我的',
-                    path: '/my'
+                    path: '/my',
+                    type: 'user'
                 }
             ],
             current: '/home'
@@ -47,7 +52,7 @@ class Footer extends React.Component {
                     return <div key={index} 
                             className={this.state.current===item.path?"active":""}
                             onClick={this.goto.bind(this,item.path)}>
-                                <span>{item.name}</span>
+                                <Icon type={item.type} />
                                 <span>{item.name}</span>
                             </div>
                 })

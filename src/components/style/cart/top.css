@@ -1,0 +1,18 @@
+.top {
+  width: 100%;
+  height: 1.54666667rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+}
+.top .left,
+.top .right {
+  min-width: 1.6rem;
+  min-height: 0.8rem;
+}
+.top .center {
+  font-size: 0.48rem;
+  color: #ff9a8d;
+  flex: 1;
+}

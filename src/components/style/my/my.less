@@ -1,0 +1,71 @@
+@import url(../common/main.less);
+
+.user{
+    width: 100%;
+    .h(618);
+    background-color: #f2f2f2;
+    overflow: auto;
+    // .margin-b(48);
+    .mytop{
+        .h(156);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .bg{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;   
+        }
+        .head{
+            z-index: 1;
+            .w(90);
+            .h(90);
+            div{
+                .margin(10,10,10,10);
+                .h(70);
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        span{
+            .h(30);
+            .lh(15);
+            z-index: 1;
+            display: inline-block;
+            .padding(8,8,8,8);
+            color: #fff;
+        }
+    }
+    .com{
+        .margin-t(10);
+        background-color: #fff;
+    }
+    .order{
+        .h(112);
+    }
+    .transfer{
+        .h(48);
+        // .margin-t(10);
+        // background-color: #fff;
+    }
+    .shipments{
+        .h(48);
+    }
+    .news{
+        .h(195);
+    }
+    .us{
+        .h(48);
+    }
+    .end{
+        .h(33);
+        .margin-t(20);
+    }
+}
