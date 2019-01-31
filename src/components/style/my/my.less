@@ -5,7 +5,6 @@
     .h(618);
     background-color: #f2f2f2;
     overflow: auto;
-    // .margin-b(48);
     .mytop{
         .h(156);
         position: relative;
@@ -49,23 +48,143 @@
     }
     .order{
         .h(112);
+        .order-top{
+            .h(42);
+            .padding-l(12);
+            border-bottom: 1px solid #f2f2f2;
+            .margin-b(10);
+            display: flex;
+            align-items: center;
+            p{
+                flex: 1;
+                margin: 0;
+                text-align: right;
+                .padding-r(12);
+                color: #d6d6d6;
+                .fs(12);
+            }
+        }
+        .order-center{
+            .h(50);
+            .margin-b(10);
+            display: flex;
+            div{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                i{
+                    .fs(24);
+                }
+                span{
+                    .fs(12);
+                }
+            }
+        }
     }
-    .transfer{
-        .h(48);
-        // .margin-t(10);
-        // background-color: #fff;
+    .com2{
+        div{
+            .h(48);
+            .padding(0,12,0,10);
+            display: flex;
+            align-items: center;
+            i{
+                .fs(22);
+                color: #ff897e;
+                .margin-r(10);
+            }
+            p{
+                flex: 1;
+                margin: 0;
+                text-align: right;
+                color: #d6d6d6;
+                .fs(12);
+                i{
+                    .fs(14);
+                    color: #d6d6d6;
+                    margin: 0;
+                }
+            }
+        }
+        .message{
+            p{
+               i{
+                    color: #d6d6d6;
+                } 
+            }
+            
+        }
+        .discount{
+            p{
+                i{
+                    color: #d6d6d6;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        .star{
+            p{
+                i{
+                    color: #d6d6d6;
+                }
+            }
+        }
     }
-    .shipments{
-        .h(48);
+    .transfer,.shipments,.us{
+        .h(48);  
     }
     .news{
         .h(195);
+        .br{
+            border-bottom: 1px solid #f2f2f2;
+        }
+        div{
+            .h(48);  
+        }
+        .message{
+            i{
+                color: #9293de;
+            }
+        }
+        .discount{
+            i{
+                color: #ff897e;
+                transform: rotate(270deg);
+            }
+        }
+        .money{
+            i{
+                color: #68c6e6;
+            }
+        }
+        .star{
+            i{
+                color: #ffcd31;
+            }
+        }
     }
     .us{
-        .h(48);
+        .padding-l(16);
+        display: flex;
+        align-items: center;
+        p{
+            flex: 1;
+            text-align: left;
+            margin: 0;
+        }
+        i{
+            .margin-r(12);
+            color: #d6d6d6;
+        }
     }
     .end{
         .h(33);
         .margin-t(20);
+        p{
+            .padding(10,0,10,0);
+            margin: 0;
+            .fs(12);
+            color: #d6d6d6;
+        }
     }
 }

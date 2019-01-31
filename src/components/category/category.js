@@ -13,7 +13,8 @@ class Category extends React.Component {
             list: [],
             SubCategories: [],
             tabIs: 0,
-            contentIs:0
+            contentIs:0,
+            spinning:true
         }
         this.change = this.change.bind(this);
         this.changeTab = this.changeTab.bind(this);
@@ -24,7 +25,8 @@ class Category extends React.Component {
                 console.log(res.data.Category);
                 this.setState({
                     list: res.data.Category,
-                    SubCategories: res.data.Category[0].SubCategories
+                    SubCategories: res.data.Category[0].SubCategories,
+                    spinning:false
                 })
             })
             .catch((err) => {
@@ -56,10 +58,10 @@ class Category extends React.Component {
                         list={this.state.list}
                         SubCategories={this.state.SubCategories}
                         contentIs={this.state.contentIs}
+                        spinning={this.state.spinning}
                         change={this.change}
                         ></Content>
-                    </div>
-                    
+                    </div> 
                 }
                 {
                     <div className={this.state.tabIs === 1 ? "" : "hide"}>

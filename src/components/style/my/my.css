@@ -54,19 +54,126 @@
 .user .order {
   height: 2.98666667rem;
 }
-.user .transfer {
-  height: 1.28rem;
+.user .order .order-top {
+  height: 1.12rem;
+  padding-left: 0.32rem;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 0.26666667rem;
+  display: flex;
+  align-items: center;
 }
-.user .shipments {
+.user .order .order-top p {
+  flex: 1;
+  margin: 0;
+  text-align: right;
+  padding-right: 0.32rem;
+  color: #d6d6d6;
+  font-size: 0.32rem;
+}
+.user .order .order-center {
+  height: 1.33333333rem;
+  margin-bottom: 0.26666667rem;
+  display: flex;
+}
+.user .order .order-center div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.user .order .order-center div i {
+  font-size: 0.64rem;
+}
+.user .order .order-center div span {
+  font-size: 0.32rem;
+}
+.user .com2 div {
+  height: 1.28rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.26666667rem;
+  padding-right: 0.32rem;
+  display: flex;
+  align-items: center;
+}
+.user .com2 div i {
+  font-size: 0.58666667rem;
+  color: #ff897e;
+  margin-right: 0.26666667rem;
+}
+.user .com2 div p {
+  flex: 1;
+  margin: 0;
+  text-align: right;
+  color: #d6d6d6;
+  font-size: 0.32rem;
+}
+.user .com2 div p i {
+  font-size: 0.37333333rem;
+  color: #d6d6d6;
+  margin: 0;
+}
+.user .com2 .message p i {
+  color: #d6d6d6;
+}
+.user .com2 .discount p i {
+  color: #d6d6d6;
+  transform: rotate(0deg);
+}
+.user .com2 .star p i {
+  color: #d6d6d6;
+}
+.user .transfer,
+.user .shipments,
+.user .us {
   height: 1.28rem;
 }
 .user .news {
   height: 5.2rem;
 }
-.user .us {
+.user .news .br {
+  border-bottom: 1px solid #f2f2f2;
+}
+.user .news div {
   height: 1.28rem;
+}
+.user .news .message i {
+  color: #9293de;
+}
+.user .news .discount i {
+  color: #ff897e;
+  transform: rotate(270deg);
+}
+.user .news .money i {
+  color: #68c6e6;
+}
+.user .news .star i {
+  color: #ffcd31;
+}
+.user .us {
+  padding-left: 0.42666667rem;
+  display: flex;
+  align-items: center;
+}
+.user .us p {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+.user .us i {
+  margin-right: 0.32rem;
+  color: #d6d6d6;
 }
 .user .end {
   height: 0.88rem;
   margin-top: 0.53333333rem;
+}
+.user .end p {
+  padding-top: 0.26666667rem;
+  padding-bottom: 0.26666667rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  margin: 0;
+  font-size: 0.32rem;
+  color: #d6d6d6;
 }
