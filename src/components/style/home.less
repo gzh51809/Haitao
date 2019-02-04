@@ -1,2 +1,158 @@
 @import url(./common/main.less);
 
+.home{
+    .h(619);
+    overflow: auto;
+    background-color: #f2f2f2;
+    .ant-carousel{
+        .h(194);
+        .adver{
+            .w(375);
+            img{
+                width: 100%;
+                .h(194);
+            }
+        }
+    }
+    .timer{
+        width: 100%;
+        .h(390);
+        .margin-t(10);
+        .limit{
+            .h(380);
+            .margin-b(10);
+            border-bottom: 1px solid #f2f2f2;
+            background-color: #fff;
+            .title{
+                .h(40);
+                margin: 0;
+                display: flex;
+                align-items: center;
+                i{
+                    color: #ff6854;
+                    .fs(16);
+                    .margin(0,8,0,18);
+                }
+                span{
+                    font-weight: bold;
+                }
+                .count{
+                    flex: 1;
+                    .h(36);
+                    .padding-r(16);
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .fs(12);
+                    span{
+                        color: #d5d5d5;
+                    }
+                    .down{
+                        span{
+                            display: inline-block;
+                            .w(17);
+                            .h(19);
+                            background-color: #5c5c5c;
+                            color: #fff;
+                            .fs(10);
+                        }
+                    }
+                }
+            }
+            img{
+                width: 100%;
+                .h(134);
+            }
+            .rob{
+                .h(205);
+                ul{
+                    .h(205);
+                    margin: 0;
+                    li{
+                        float: left;
+                        .w(125);
+                        .h(174);
+                        .margin-b(18);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .img{
+                            .w(100);
+                            .h(100);
+                            .margin(5,5,5,5);
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            .fs(12);
+                            .h(16);
+                            max-width: 100%;
+                            .w(100);
+                            margin: 0;
+                            text-overflow: ellipsis;
+                            word-wrap: break-word;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .price{
+                            .margin(5,0,5,0);
+                            .fs(12);
+                            .active{
+                                color: #ff6854;
+                                font-weight: bold;
+                            }
+                            .del{
+                                color: #dcdcdc;
+                            }
+                        }
+                        .btn{
+                            .w(80);
+                            .h(20);
+                            .lh(16);
+                            border: 1px solid #ff8170;
+                            color: #ff8170;
+                            .br(10);
+                            .fs(12);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hot{
+        .h(485);
+        .margin-b(10);
+        background-color: #fff;
+        .title{
+            .h(40);
+            display: flex;
+            align-items: center;
+            i{
+                .fs(16);
+                .margin(0,8,0,18);
+            }
+            span{
+                font-weight: bold;
+            }
+            div{
+                flex: 1;
+                .h(36);
+                .lh(36);
+                text-align: right;
+                .padding-r(16);
+                .fs(12);
+                color: #b3b3b3;
+            }     
+        }
+        img{
+            width: 100%;
+            .h(134);
+        }
+        .products{
+            .h(310);
+        }
+    }
+}
