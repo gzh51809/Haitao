@@ -1,0 +1,71 @@
+.mother {
+  height: 17.06666667rem;
+  margin-bottom: 0.26666667rem;
+  background-color: #fff;
+}
+.mother .title {
+  height: 1.06666667rem;
+  display: flex;
+  align-items: center;
+}
+.mother .title i {
+  font-size: 0.42666667rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0.48rem;
+  margin-right: 0.21333333rem;
+}
+.mother .title span {
+  font-weight: bold;
+}
+.mother img {
+  width: 100%;
+  height: 3.57333333rem;
+}
+.mother .products {
+  height: 12.4rem;
+}
+.mother .products .item {
+  float: left;
+  width: 3.33333333rem;
+  height: 4.13333333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mother .products .item .productImg {
+  width: 2.85333333rem;
+  height: 2.85333333rem;
+  margin-top: 0rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+}
+.mother .products .item .productImg img {
+  height: 100%;
+}
+.mother .products .item .text {
+  font-size: 0.32rem;
+  height: 0.42666667rem;
+  max-width: 100%;
+  width: 2.66666667rem;
+  margin: 0;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mother .products .item .price {
+  margin-top: 0.10666667rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  font-size: 0.32rem;
+}
+.mother .products .item .price .active {
+  color: #ff6854;
+  font-weight: bold;
+}
+.mother .products .item .price .del {
+  color: #dcdcdc;
+}
