@@ -3,6 +3,20 @@
   overflow: auto;
   background-color: #f2f2f2;
 }
+.home .search {
+  position: fixed;
+  z-index: 1;
+}
+.home .search div {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+.home #search {
+  background-color: #ff6868;
+}
+.home #search div {
+  background-color: #d95959;
+}
 .home .ant-carousel {
   height: 5.17333333rem;
 }
