@@ -10,7 +10,11 @@ class Arrival extends React.Component {
 
         }
     }
+    componentDidMount() {
+        console.log(this.props);
+    }
     render() {
+        let { data } = this.props;
         return (
             <div className="hot">
                 <div className="title">
@@ -18,9 +22,25 @@ class Arrival extends React.Component {
                     <span>新品上市</span>
                     <div>最新流行抢先知道</div>
                 </div>
-                <img src="https://resource.51taouk.com/AdminImages/Content1/1/62d9a5a4-2dd5-48d8-b20e-248535f26cf5.png?imageMogr2/format/webp/thumbnail/x536" />
+                <img src="https://resource.51taouk.com/AdminImages/Content1/1/62d9a5a4-2dd5-48d8-b20e-248535f26cf5.png" />
                 <div className="products">
-                    <div className="item">
+                {
+                    data.map((item,index)=>{
+                        return (
+                            <div className="item" key={index}>
+                                <div className="productImg">
+                                    <img src={item.ImageUrl} />
+                                </div>
+                                <p className="text">{item.Name}</p>
+                                <p className="price">
+                                    <span className="active">￥</span><span className="active">{item.Price}</span>
+                                    <span className="del"><del>￥{item.OldPrice}</del></span>
+                                </p>
+                            </div>
+                        )
+                    })
+                }
+                    {/* <div className="item">
                         <div className="productImg">
                             <img src="https://resource.51taouk.com/AdminImages/Product/6/2886cba4-b9ff-4659-87a0-9abd99f4048b.jpg" />
                         </div>
@@ -79,7 +99,7 @@ class Arrival extends React.Component {
                             <span className="active">￥</span><span className="active">20.07</span>
                             <span className="del"><del>￥24.08</del></span>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

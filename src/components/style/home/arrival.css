@@ -33,6 +33,7 @@
 }
 .hot .products {
   height: 8.26666667rem;
+  overflow: hidden;
 }
 .hot .products .item {
   float: left;

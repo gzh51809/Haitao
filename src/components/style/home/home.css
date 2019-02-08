@@ -82,20 +82,23 @@
 .home .timer .limit .rob {
   height: 5.46666667rem;
 }
-.home .timer .limit .rob ul {
+.home .timer .limit .rob .robItems {
   height: 5.46666667rem;
-  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
 }
-.home .timer .limit .rob ul li {
-  float: left;
+.home .timer .limit .rob .robItems .item {
+  display: inline-block;
   width: 3.33333333rem;
   height: 4.64rem;
   margin-bottom: 0.48rem;
+}
+.home .timer .limit .rob .robItems .item div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.home .timer .limit .rob ul li .img {
+.home .timer .limit .rob .robItems .item div .img {
   width: 2.66666667rem;
   height: 2.66666667rem;
   margin-top: 0.13333333rem;
@@ -103,11 +106,11 @@
   margin-left: 0.13333333rem;
   margin-right: 0.13333333rem;
 }
-.home .timer .limit .rob ul li .img img {
+.home .timer .limit .rob .robItems .item div .img img {
   width: 100%;
   height: 100%;
 }
-.home .timer .limit .rob ul li .text {
+.home .timer .limit .rob .robItems .item div .text {
   font-size: 0.32rem;
   height: 0.42666667rem;
   max-width: 100%;
@@ -118,21 +121,21 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.home .timer .limit .rob ul li .price {
+.home .timer .limit .rob .robItems .item div .price {
   margin-top: 0.13333333rem;
   margin-bottom: 0.13333333rem;
   margin-left: 0rem;
   margin-right: 0rem;
   font-size: 0.32rem;
 }
-.home .timer .limit .rob ul li .price .active {
+.home .timer .limit .rob .robItems .item div .price .active {
   color: #ff6854;
   font-weight: bold;
 }
-.home .timer .limit .rob ul li .price .del {
+.home .timer .limit .rob .robItems .item div .price .del {
   color: #dcdcdc;
 }
-.home .timer .limit .rob ul li .btn {
+.home .timer .limit .rob .robItems .item div .btn {
   width: 2.13333333rem;
   height: 0.53333333rem;
   line-height: 0.42666667rem;

@@ -24,6 +24,7 @@
 }
 .mother .products {
   height: 12.4rem;
+  overflow: hidden;
 }
 .mother .products .item {
   float: left;

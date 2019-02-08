@@ -10,16 +10,36 @@ class Mother extends React.Component {
 
         }
     }
+    componentDidMount() {
+        console.log(this.props);
+    }
     render() {
+        let { data } = this.props;
         return (
             <div className="mother">
                 <div className="title">
                     <Icon type="trophy" theme="filled" style={{ color: '#ff7c6b' }} />
-                    <span>母婴用品</span>
+                    <span>{data.Name}</span>
                 </div>
-                <img src="https://resource.51taouk.com/AdminImages/Content1/1/62d9a5a4-2dd5-48d8-b20e-248535f26cf5.png?imageMogr2/format/webp/thumbnail/x536" />
+                <img src={data.ImageUrl} />
                 <div className="products">
-                    <div className="item">
+                {
+                    data.TopProductList.map((item,index)=>{
+                        return (
+                            <div className="item" key={index}>
+                                <div className="productImg">
+                                    <img src={item.ImageUrl} />
+                                </div>
+                                <p className="text">{item.Name}</p>
+                                <p className="price">
+                                    <span className="active">￥</span><span className="active">{item.SpecialPrice}</span>
+                                    <span className="del"><del>￥{item.OldPrice}</del></span>
+                                </p>
+                            </div>
+                        )
+                    })
+                }
+                    {/* <div className="item">
                         <div className="productImg">
                             <img src="https://resource.51taouk.com/AdminImages/Product/6/2886cba4-b9ff-4659-87a0-9abd99f4048b.jpg" />
                         </div>
@@ -108,7 +128,7 @@ class Mother extends React.Component {
                             <span className="active">￥</span><span className="active">20.07</span>
                             <span className="del"><del>￥24.08</del></span>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )
