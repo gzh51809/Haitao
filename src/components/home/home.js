@@ -423,6 +423,10 @@ class Home extends React.Component {
             ]
         }
     }
+    // goto(path){
+    //     this.props.history.push(path);
+    //     console.log('成功');
+    // }
     componentDidMount(){
         // axios.get('https://webapi.51taouk.com/api/content/getAllContentsByPage/app')
         // axios.get('../../../data/home.php')
@@ -436,7 +440,7 @@ class Home extends React.Component {
     render(){
         return (
             <div className="home">
-                <Topsearch></Topsearch>
+                <Topsearch props={this.props}></Topsearch>
                 <Carousel autoplay>
                     <div className="adver"><img alt="" src="https://resource.51taouk.com/AdminImages/Content1/1/09c396d3-cf84-4e9a-a8ba-ee237a0b98ba.jpg" /></div>
                     <div className="adver"><img alt="" src="https://resource.51taouk.com/AdminImages/Content1/1/8aa32839-80a5-4eca-8285-53f2d9cbe719.jpg" /></div>

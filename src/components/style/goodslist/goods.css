@@ -1,0 +1,77 @@
+.goods {
+  width: 100%;
+  height: 15.54666667rem;
+  background-color: #f0f0f0;
+  overflow: auto;
+}
+.goods .items {
+  float: left;
+  width: 4.8rem;
+  height: 6.4rem;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0rem;
+  padding-top: 0.21333333rem;
+  padding-bottom: 0.21333333rem;
+  padding-left: 0.21333333rem;
+  padding-right: 0.21333333rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.goods .items .goodsImg {
+  width: 4.32rem;
+  height: 4.32rem;
+  margin-bottom: 0.05333333rem;
+}
+.goods .items .goodsImg img {
+  width: 100%;
+  height: 100%;
+}
+.goods .items .goodsCon {
+  display: flex;
+  flex-direction: column;
+}
+.goods .items .goodsCon .goodsName {
+  font-size: 0.32rem;
+  line-height: 0.4rem;
+  height: 0.96rem;
+  overflow: hidden;
+  margin-top: 0.13333333rem;
+}
+.goods .items .goodsCon .goodsPrice {
+  text-align: left;
+  margin-top: 0.21333333rem;
+  height: 0.48rem;
+}
+.goods .items .goodsCon .goodsPrice .active {
+  color: #ff6854;
+}
+.goods .items .goodsCon .goodsPrice .del {
+  font-size: 0.32rem;
+  color: #dcdcdc;
+}
+.goods .items .bao {
+  width: 0.53333333rem;
+  height: 0.8rem;
+  position: absolute;
+  top: -0.13333333rem;
+  left: 0.13333333rem;
+  overflow: hidden;
+}
+.goods .items .bao img {
+  width: 100%;
+  height: 100%;
+}
+.goods .items .bao div {
+  position: absolute;
+  top: 0.05333333rem;
+  left: -0.02666667rem;
+  color: #fff;
+}
+.goods .items .hide {
+  display: none;
+}

@@ -8,7 +8,8 @@ import Home from './components/home/home';
 import Category from './components/category/category';
 import Cart from './components/cart/cart';
 import My from './components/my/my';
-// import Topsearch from './components/common/topsearch';
+import Search from './components/search/search';
+import Goodslist from './components/goodslist/goodslist';
 import Footer from './components/common/footer';
 
 class App extends Component {
@@ -36,6 +37,8 @@ class App extends Component {
           <Route path='/category' component={Category} />
           <Route path='/cart' component={Cart} />
           <Route path='/my' component={My} />
+          <Route path='/search' component={Search} />
+          <Route path='/list' component={Goodslist} />
           <Redirect from="/" to="/home" />
         </Switch>
       </div>

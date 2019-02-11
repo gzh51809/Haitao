@@ -22,7 +22,7 @@ class Category extends React.Component {
     componentDidMount() {
         axios.post('https://m.51taouk.com/api/category')
             .then((res) => {
-                console.log(res.data.Category);
+                // console.log(res.data.Category);
                 this.setState({
                     list: res.data.Category,
                     SubCategories: res.data.Category[0].SubCategories,
@@ -47,7 +47,7 @@ class Category extends React.Component {
     render() {
         return (
             <div>
-                <Topsearch></Topsearch>
+                <Topsearch props={this.props}></Topsearch>
                 <Header 
                 tabIs={this.state.tabIs}
                 changeTab={this.changeTab}

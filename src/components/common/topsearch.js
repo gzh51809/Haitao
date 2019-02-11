@@ -10,11 +10,13 @@ class Topsearch extends React.Component {
             
         }
     }
-    
+    goto(path){
+        this.props.props.history.push(path);
+    }
     render() {
         return (
             <div className="search">
-                <div>
+                <div onClick={this.goto.bind(this,'/search')}>
                     <Icon type="search" />
                     <span>搜索美国热卖</span>
                 </div>

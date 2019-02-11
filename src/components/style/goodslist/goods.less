@@ -1,0 +1,73 @@
+@import url(../common/main.less);
+
+.goods{
+    width: 100%;
+    .h(583);
+    background-color: #f0f0f0;
+    overflow: auto;
+    .items{
+        float: left;
+        .w(180);
+        .h(240);
+        .margin(5,0,0,5);
+        .padding(8,8,8,8);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .goodsImg{
+            .w(162);
+            .h(162);
+            .margin-b(2);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .goodsCon{
+            display: flex;
+            flex-direction: column;
+            .goodsName{
+                .fs(12);
+                .lh(15);
+                .h(36);
+                overflow: hidden;
+                .margin-t(5);
+            }
+            .goodsPrice{
+                text-align: left;
+                .margin-t(8);
+                .h(18);
+                .active{
+                    color: #ff6854;
+                }
+                .del{
+                    .fs(12);
+                    color: #dcdcdc;
+                }
+            }
+        }
+        .bao{
+            .w(20);
+            .h(30);
+            position: absolute;
+            .top(-5);
+            .left(5);
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            div{
+                position: absolute;
+                .top(2);
+                .left(-1);
+                color: #fff;
+            }
+        }
+        .hide{
+            display: none;
+        }
+    }
+}

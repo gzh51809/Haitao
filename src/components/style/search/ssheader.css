@@ -1,0 +1,46 @@
+.ssheader {
+  height: 1.17333333rem;
+  background-color: #fff;
+  padding-top: 0.21333333rem;
+  padding-bottom: 0.18666667rem;
+  padding-left: 0.42666667rem;
+  padding-right: 0.42666667rem;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+}
+.ssheader .left {
+  width: 1.06666667rem;
+  height: 100%;
+  padding-right: 0.21333333rem;
+  font-size: 0.48rem;
+}
+.ssheader .center {
+  flex: 1;
+  border: 1px solid #f5f5f5;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+  background-color: #f5f5f5;
+}
+.ssheader .center input {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  margin-left: 0.26666667rem;
+}
+.ssheader .center input::-webkit-input-placeholder {
+  color: #757575;
+  font-size: 0.32rem;
+}
+.ssheader .right {
+  width: 1.25333333rem;
+  height: 100%;
+  padding-top: 0.13333333rem;
+  padding-bottom: 0.13333333rem;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+  text-align: right;
+  font-size: 0.34666667rem;
+  color: #ff7c6b;
+}
