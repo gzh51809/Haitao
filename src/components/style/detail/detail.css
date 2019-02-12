@@ -1,0 +1,273 @@
+.detail {
+  width: 100%;
+  height: 17.78666667rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.detail .d-top {
+  height: 1.06666667rem;
+  display: flex;
+  align-items: center;
+}
+.detail .d-top .d-l {
+  width: 1.44rem;
+  height: 0.85333333rem;
+  font-size: 0.58666667rem;
+}
+.detail .d-top .d-l i {
+  color: #b1b1b1;
+}
+.detail .d-top .d-c {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.detail .d-top .d-c .d-cc {
+  width: 5.6rem;
+  display: flex;
+  justify-content: center;
+}
+.detail .d-top .d-c .d-cc div {
+  width: 1.06666667rem;
+  height: 0.72rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+.detail .d-top .d-c .d-cc div a {
+  display: block;
+  height: 100%;
+  color: #3a3a3a;
+}
+.detail .d-top .d-c .d-cc .active {
+  border-bottom: 2px solid #ff6854;
+}
+.detail .d-top .d-c .d-cc .active a {
+  color: #ff6854;
+}
+.detail .d-center {
+  height: 15.01333333rem;
+  overflow: auto;
+  background-color: #f2f2f2;
+}
+.detail .d-center .d-img {
+  height: 10rem;
+}
+.detail .d-center .d-img img {
+  width: 100%;
+}
+.detail .d-center .d-text .d-text-h {
+  background-color: #fff;
+  padding-top: 0.37333333rem;
+  padding-bottom: 0.37333333rem;
+  padding-left: 0.42666667rem;
+  padding-right: 0.42666667rem;
+  text-align: left;
+}
+.detail .d-center .d-text .d-text-h .d-name {
+  line-height: 1.3;
+}
+.detail .d-center .d-text .d-text-h .d-name .chinese {
+  font-size: 0.42666667rem;
+}
+.detail .d-center .d-text .d-text-h .d-name .english {
+  margin-top: 0.21333333rem;
+}
+.detail .d-center .d-text .d-text-h .d-price {
+  margin-top: 0.21333333rem;
+  margin-bottom: 0.21333333rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+.detail .d-center .d-text .d-text-h .d-price .now {
+  color: #f66562;
+  font-size: 0.48rem;
+}
+.detail .d-center .d-text .d-text-h .d-price .del {
+  color: #d3d3d3;
+  margin-left: 0.26666667rem;
+}
+.detail .d-center .d-text .d-text-h .fuwu {
+  line-height: 1.2;
+}
+.detail .d-center .d-text .d-text-h .fuwu span {
+  margin-right: 0.26666667rem;
+  font-size: 0.32rem;
+}
+.detail .d-center .d-text .d-text-h .fuwu .pin {
+  display: inline-block;
+  width: 0.37333333rem;
+  height: 0.37333333rem;
+  margin-right: 0.10666667rem;
+}
+.detail .d-center .d-text .d-text-h .fuwu .pin img {
+  width: 100%;
+}
+.detail .d-center .d-text .kong {
+  height: 0.26666667rem;
+  background-color: #f2f2f2;
+}
+.detail .d-center .d-text .recom {
+  background-color: #fff;
+}
+.detail .d-center .d-text .recom .r-con {
+  text-align: left;
+}
+.detail .d-center .d-text .recom .r-con .r-con-t {
+  height: 1.06666667rem;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+.detail .d-center .d-text .recom .r-con .r-con-t span {
+  margin-left: 0.42666667rem;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c {
+  height: 5.44rem;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items {
+  width: 100%;
+  display: flex;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items .r-item {
+  flex: 1;
+  height: 5.06666667rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items .r-item .itemImg {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  margin-top: 0.26666667rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items .r-item .itemImg img {
+  width: 100%;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items .r-item p {
+  height: 0.85333333rem;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+  overflow: hidden;
+  font-size: 0.32rem;
+  line-height: 1.3;
+}
+.detail .d-center .d-text .recom .r-con .r-con-c .ant-carousel .r-items .r-item .price {
+  width: 100%;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+  color: #ff6854;
+  font-size: 0.34666667rem;
+}
+.detail .d-center .d-text .g-deta {
+  background-color: #fff;
+}
+.detail .d-center .d-text .g-deta .g-t {
+  height: 1.12rem;
+  display: flex;
+  align-items: center;
+}
+.detail .d-center .d-text .g-deta .g-t span {
+  margin-left: 0.42666667rem;
+}
+.detail .d-center .d-text .g-deta .g-img p {
+  margin: 0;
+}
+.detail .d-center .d-text .g-deta .g-img img {
+  width: 100%;
+}
+.detail .d-center .d-text .end {
+  height: 0.34666667rem;
+  margin-top: 0.26666667rem;
+  margin-bottom: 0.26666667rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  display: flex;
+}
+.detail .d-center .d-text .end div {
+  flex: 1;
+  background-color: #ededed;
+}
+.detail .d-center .d-text .end .one {
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 1.6rem;
+  margin-right: 0.13333333rem;
+}
+.detail .d-center .d-text .end .two {
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 1.6rem;
+}
+.detail .d-center .d-text .end span {
+  display: inline-block;
+  width: 1.6rem;
+  line-height: 0.26666667rem;
+  font-size: 0.32rem;
+  color: #b4b4b4;
+}
+.detail .d-foot {
+  width: 100%;
+  height: 1.70666667rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+}
+.detail .d-foot .buy {
+  width: 3.46666667rem;
+  display: flex;
+  align-items: center;
+}
+.detail .d-foot .buy .b-btn {
+  flex: 1;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+  height: 1.17333333rem;
+  border: 1px solid #ff6854;
+  border-radius: 5px;
+}
+.detail .d-foot .buy .b-btn span {
+  line-height: 1.17333333rem;
+  color: #ff6854;
+  font-size: 0.48rem;
+}
+.detail .d-foot .addCart {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.detail .d-foot .addCart .c-btn {
+  flex: 1;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+  height: 1.17333333rem;
+  border-radius: 5px;
+  background-color: #ff6854;
+}
+.detail .d-foot .addCart .c-btn span {
+  line-height: 1.17333333rem;
+  font-size: 0.48rem;
+  color: #fff;
+}

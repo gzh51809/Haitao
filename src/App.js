@@ -10,6 +10,7 @@ import Cart from './components/cart/cart';
 import My from './components/my/my';
 import Search from './components/search/search';
 import Goodslist from './components/goodslist/goodslist';
+import Detail from './components/detail/detail';
 import Footer from './components/common/footer';
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path='/my' component={My} />
           <Route path='/search' component={Search} />
           <Route path='/list' component={Goodslist} />
+          <Route path='/detail/:name' component={Detail} />
           <Redirect from="/" to="/home" />
         </Switch>
       </div>

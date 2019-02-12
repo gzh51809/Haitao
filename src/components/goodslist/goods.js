@@ -8,6 +8,9 @@ class Goods extends React.Component {
         this.state = {
         }
     }
+    goto(path){
+        this.props.props.history.push(path);
+    }
     render() {
         let { list } = this.props;
         return (
@@ -15,7 +18,7 @@ class Goods extends React.Component {
             {
                 list.map((item,index)=>{
                     return (
-                        <div className="items" key={index}>
+                        <div className="items" key={index} onClick={this.goto.bind(this,'/detail/APTDAP1')}>
                             <div className="goodsImg">
                                 <img alt="" src={item.ImageUrl} />
                             </div>

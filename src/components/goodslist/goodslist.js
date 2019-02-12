@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import '../style/goodslist/goodslist.css';
 
@@ -75,13 +76,45 @@ class Goodslist extends React.Component {
             ]
         }
     }
+    componentDidMount() {
+        // axios.post('https://webapi.51taouk.com/api/product/search', {
+        //     AllowPaging: true,
+        //     BrandId: "",
+        //     BrandName: "",
+        //     CategoryId: 0,
+        //     CategoryName: "",
+        //     PageIndex: 0,
+        //     PageSize: 10,
+        //     ProductName: "爱他美",
+        //     ProductSKU: "",
+        //     ProductSortType: 1,
+        //     ProductTags: [],
+        //     ProductTypeId: 7,
+        //     SortDirection: 0
+        // },{
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'platform': 'h5',
+        //         'token': 'VH2Ha5utRXwBYAdTG4zd6nAno9akuVw6 + h / DQIqGWtd6bQB8s1q0o8CYuYK5rDQehVVIvwDY9B0CKl2S06WhCWOTN / G1Lb8rTQkDvODFGRxYHDzX / CwlRmKzGZiLIrgPmamnNekkD24ypb4m3DKSHA =='
+        //     }
+        // })
+        // .then((res)=>{
+        //     console.log(res.data);
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
+    }
     render(){
         return (
             <div className="goodslist">
                 <Ssheader props={this.props}></Ssheader>
                 <div className="list">
                     <Nav></Nav>
-                    <Goods list={this.state.ListObjects}></Goods>
+                    <Goods 
+                    props={this.props}
+                    list={this.state.ListObjects}
+                    ></Goods>
                 </div>
             </div>
         )

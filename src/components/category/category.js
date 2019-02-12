@@ -18,6 +18,7 @@ class Category extends React.Component {
         }
         this.change = this.change.bind(this);
         this.changeTab = this.changeTab.bind(this);
+        this.goto = this.goto.bind(this);
     }
     componentDidMount() {
         axios.post('https://m.51taouk.com/api/category')
@@ -44,6 +45,9 @@ class Category extends React.Component {
             contentIs: index
         })
     }
+    goto(){
+        this.props.history.push('/list');
+    }
     render() {
         return (
             <div>
@@ -60,6 +64,7 @@ class Category extends React.Component {
                         contentIs={this.state.contentIs}
                         spinning={this.state.spinning}
                         change={this.change}
+                        goto={this.goto}
                         ></Content>
                     </div> 
                 }

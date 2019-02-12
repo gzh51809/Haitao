@@ -11,7 +11,7 @@ class Content extends React.Component {
         }
     }
     render() {
-        let { list, SubCategories, contentIs, spinning, change} = this.props;
+        let { list, SubCategories, contentIs, spinning, change, goto} = this.props;
         return (
             <div className="content">
             {
@@ -45,7 +45,7 @@ class Content extends React.Component {
                         <div className="sub">
                         {
                             SubCategories.map((item,index)=>{
-                                return  <div className="item" key={index}>
+                                return  <div className="item" key={index} onClick={goto}>
                                             <div className="img2">
                                                 <img alt="" src={item.SmallImageUrl} />
                                             </div>
