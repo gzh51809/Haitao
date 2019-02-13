@@ -271,3 +271,6 @@
   font-size: 0.48rem;
   color: #fff;
 }
+.detail .hide {
+  display: none;
+}

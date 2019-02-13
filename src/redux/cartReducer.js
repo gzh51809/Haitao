@@ -4,8 +4,9 @@ let defaultState = {
     step: 0
 }
 let cartReducer = function (state = defaultState, action) {
+    // action{ type: 'xx', palyload: { xx } }
     switch (action.type) {
-        case 'add':
+        case 'addCart':
             return {
                 ...state,
                 cartlist: [...state.cartlist, action.payload]

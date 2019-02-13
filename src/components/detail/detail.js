@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import '../style/detail/detail.css';
 
+import Buygoods from './buy';
+
 class Detail extends React.Component {
     constructor() {
         super();
@@ -14,6 +16,7 @@ class Detail extends React.Component {
                 ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/1a1b78de-4edb-4522-b874-3b99ce5cbdbb.jpg",
                 Name: "英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
                 ProductEnglishName: "Aptamil Profutura First Infant milk From birth 800g",
+                Id: 254708,
                 Price: 13.99,
                 OldPrice: 19.99,
                 FullDescription: '<p><img title="白金版爱他美1段描述_01.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414142256968820764.jpg"/><img title="白金版爱他美1段描述_02.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414874868292815085.jpg"/><img title="白金版爱他美1段描述_03.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414222342363177543.jpg"/><img title="白金版爱他美1段描述_04.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414270769331862211.jpg"/><img title="白金版爱他美1段描述_05.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414325849188762033.jpg"/><img title="白金版爱他美1段描述_06.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414378389073432609.jpg"/><img title="白金版爱他美1段描述_07.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414429558648575769.jpg"/><img title="白金版爱他美1段描述_08.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414483661613246345.jpg"/><img title="白金版爱他美1段描述_09.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414535808436916922.jpg"/><img title="白金版爱他美1段描述_10.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414800163794444215.jpg"/><img title="白金版爱他美1段描述_11.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414585418871303418.jpg"/><img title="白金版爱他美1段描述_12.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414636786161744749.jpg"/><img title="白金版爱他美1段描述_13.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414692351882873816.jpg"/><img title="白金版爱他美1段描述_14.jpg" align="absmiddle" style="" src="https://resource.51taouk.com/AdminImages/Editor/6/201710276364473414747724319773638.jpg"/></p><p><br/></p>'
@@ -25,14 +28,17 @@ class Detail extends React.Component {
                 {
                     ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/4aee76c5-1281-438b-9c63-168331b405c7.jpg",
                     ProductName: "【包邮包税】2罐 英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
+                    Id: 254696,
                     Price: 48
                 },{
                     ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/a84a8ee6-48c8-4797-8835-166afd90b954.jpg",
                     ProductName: "【包邮包税】4罐 英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
+                    Id: 254697,
                     Price: 96
                 },{
                     ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/d91322e0-1a14-4f45-90d5-08359709001f.jpg",
                     ProductName: "【包邮包税】6罐 英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
+                    Id: 254698,
                     Price: 144
                 },{
                     ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/10192a82-07ff-45c9-9daf-3eebdb87ee82.jpg",
@@ -63,8 +69,37 @@ class Detail extends React.Component {
                     ProductName: "【包邮包税】4罐 英国原装爱他美 白金版 3段 1-2岁 奶粉800G",
                     Price: 96
                 }
+            ],
+            buygoods:false,
+            ProductVariants:[
+                {
+                    ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/1a1b78de-4edb-4522-b874-3b99ce5cbdbb.jpg",
+                    Name: "一罐装",
+                    ProductId: 254708,
+                    OldPrice: 19.99,
+                    Price: 13.99
+                },{
+                    ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/4aee76c5-1281-438b-9c63-168331b405c7.jpg",
+                    Name: "二罐装",
+                    ProductId: 254696,
+                    OldPrice: 49,
+                    Price: 48
+                },{
+                    ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/a84a8ee6-48c8-4797-8835-166afd90b954.jpg",
+                    Name: "四罐装",
+                    ProductId: 254697,
+                    OldPrice: 110,
+                    Price: 96
+                },{
+                    ImageUrl: "https://resource.51taouk.com/AdminImages/Product/6/d91322e0-1a14-4f45-90d5-08359709001f.jpg",
+                    Name: "六罐装",
+                    ProductId: 254698,
+                    OldPrice: 160,
+                    Price: 144
+                }
             ]
         }
+        this.buychange = this.buychange.bind(this);
     }
     back(){
         this.props.history.goBack();
@@ -75,6 +110,11 @@ class Detail extends React.Component {
     change(index){
         this.setState({
             show:index
+        })
+    }
+    buychange(){
+        this.setState({
+            buygoods: !this.state.buygoods
         })
     }
     scrollToAnchor = (anchorName) => {
@@ -282,9 +322,19 @@ class Detail extends React.Component {
                         <div className="b-btn"><span>立即购买</span></div>
                     </div>
                     <div className="addCart">
-                        <div className="c-btn"><span>加入购物车</span></div>
+                        <div className="c-btn" onClick={this.buychange}><span>加入购物车</span></div>
                     </div>
                 </div>
+                {
+                    <div className={this.state.buygoods ? "" : "hide"}>
+                        <Buygoods 
+                        buychange={this.buychange} 
+                        firstgoods={this.state.data} 
+                        related={this.state.RelatedProducts} 
+                        variants={this.state.ProductVariants} 
+                        ></Buygoods>
+                    </div>
+                }
             </div>
         )
     }
