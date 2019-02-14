@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Carousel } from 'antd';
+import { Badge,Icon, Carousel } from 'antd';
 import axios from 'axios';
 
 import '../style/detail/detail.css';
@@ -97,9 +97,11 @@ class Detail extends React.Component {
                     OldPrice: 160,
                     Price: 144
                 }
-            ]
+            ],
+            allnum: 0
         }
         this.buychange = this.buychange.bind(this);
+        this.getallnum = this.getallnum.bind(this);
     }
     back(){
         this.props.history.goBack();
@@ -115,6 +117,11 @@ class Detail extends React.Component {
     buychange(){
         this.setState({
             buygoods: !this.state.buygoods
+        })
+    }
+    getallnum(num) {
+        this.setState({
+            allnum: num
         })
     }
     scrollToAnchor = (anchorName) => {
@@ -162,7 +169,10 @@ class Detail extends React.Component {
                             <div className={this.state.show===2?"active":""}><span>详情</span></div> */}
                         </div>
                     </div>
-                    <div className="d-l" onClick={this.gotoCart.bind(this)}><Icon type="shopping-cart" /></div>
+                    <div className="d-l" onClick={this.gotoCart.bind(this)}>
+                        <Icon type="shopping-cart" />
+                        <Badge count={this.state.allnum} style={{ minWidth: '16px',height:'16px',lineHeight:'16px' }} />
+                    </div>
                 </div>
                 <div className="d-center">
                     <div className="d-img" id="img">
@@ -192,22 +202,6 @@ class Detail extends React.Component {
                                 )
                             })
                         }
-                            {/* <div className="d-name">
-                                <div className="chinese">英国原装爱他美 白金版 1段 0-6个月 奶粉800G</div>
-                                <div className="english">Aptamil Profutura First Infant milk From birth 800g</div>
-                            </div>
-                            <div className="d-price">
-                                <span className="now">￡13.99</span>
-                                <span className="del"><del>￡19.99</del></span>
-                            </div> */}
-                            {/* <div className="fuwu">
-                                <span>服务: </span>
-                                <div className="pin"><img alt="" src="https://m.51taouk.com/static/images/icon_flag_good_product@3x.png" /></div>
-                                <span>正品保障</span>
-                                <div className="pin"><img alt="" src="https://m.51taouk.com/static/images/icon_flag_english_shipment@3x.png" /></div>
-                                <span>英国直邮</span>
-                            </div>
-                        </div> */}
                         <div className="recom">
                             <div className="kong"></div>
                             <div className="r-con">
@@ -329,6 +323,7 @@ class Detail extends React.Component {
                     <div className={this.state.buygoods ? "" : "hide"}>
                         <Buygoods 
                         buychange={this.buychange} 
+                        getallnum={this.getallnum}
                         firstgoods={this.state.data} 
                         related={this.state.RelatedProducts} 
                         variants={this.state.ProductVariants} 

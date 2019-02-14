@@ -4,7 +4,161 @@
     width: 100%;
     .h(560);
     background-color: #f2f2f2;
-    div{
+    .show{
         .padding-t(100);
+    }
+    .hide{
+        display: none;
+    }
+    .cartlist{
+        height: 100%;
+        position: relative;
+        display: flex;
+        .checked{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .ant-checkbox-checked .ant-checkbox-inner{
+                background-color: #ff6854;
+                border-color: #ff6854;
+            }
+            .ant-checkbox-inner{
+                border-color: #c7c7c7;
+                border-radius: 7px;
+            }
+        }
+        .single{
+            flex: 1;
+            .margin-b(49);
+            overflow: auto;
+            .c-item{
+                .margin-b(10);
+                display: flex;
+                flex-direction: column;
+                .c-item-t{
+                    .h(44);
+                    background-color: white;
+                    display: flex;
+                    .c-t-l{
+                        .w(45);
+                        height: 100%;
+                    }
+                    .c-t-r{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        .icon{
+                            .w(22);
+                            .h(18);
+                            .margin-r(5);
+                            i{.fs(18);}
+                        }   
+                    }
+                }
+                .c-item-c{
+                    .h(100);
+                    background-color: #f8f8f8;
+                    border-bottom: 1px solid white;
+                    display: flex;
+                    .c-l{
+                        .w(45);
+                    }
+                    .c-r{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        .c-img{
+                            .w(82);
+                            .h(82);
+                            .margin(5,5,5,5);
+                            img{width: 100%;}
+                        }
+                        .c-item-r{
+                            flex: 3;
+                            .padding(10,16,10,10);
+                            text-align: left;
+                            .c-name{       
+                                .fs(12);
+                                line-height: 1.4;
+                                color: #474747;
+                            }
+                            .c-price{
+                                .margin-t(24);
+                                display: flex;
+                                .c-price-l{
+                                    flex: 1;
+                                    .fs(13);
+                                    .now{  
+                                        color: #f5514d;
+                                    }
+                                    .del{color: #cccccc;}
+                                }
+                                .c-price-r{
+                                    .fs(13);
+                                }
+                            }
+                        }
+                    }
+                }
+                .c-item-f{
+                    .h(40);
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .c-text{.fs(13);color: #3a3a3a;}
+                    .total{
+                        .margin(10,16,10,16);
+                        color: #f5514d;
+                    }
+                }
+            }
+        }
+        .account{
+            width: 100%;
+            .h(49);
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            .account-l{
+                flex: 1;
+                display: flex;
+                .l-l{
+                    .w(45);
+                    height: 100%;
+                }
+                .l-c{
+                    .fs(13);
+                    display: flex;
+                    align-items: center;
+                }
+                .l-r{
+                    flex: 1;
+                    .padding-r(10);
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .total-con{.fs(13);}
+                    .l-total{
+                        color: #f5514d;
+                        .margin-l(10);
+                    }
+                    .freight{
+                        .fs(12);
+                        color: #cccccc;
+                        .margin-l(10);
+                    }
+                }
+            }
+            .account-r{
+                .w(100);
+                background-color: #ff6854;
+                color: white;
+                .fs(18);
+                .lh(48);
+            }
+        } 
     }
 }

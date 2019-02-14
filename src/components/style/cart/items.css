@@ -3,6 +3,180 @@
   height: 14.93333333rem;
   background-color: #f2f2f2;
 }
-.carts div {
+.carts .show {
   padding-top: 2.66666667rem;
+}
+.carts .hide {
+  display: none;
+}
+.carts .cartlist {
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+.carts .cartlist .checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carts .cartlist .checked .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #ff6854;
+  border-color: #ff6854;
+}
+.carts .cartlist .checked .ant-checkbox-inner {
+  border-color: #c7c7c7;
+  border-radius: 7px;
+}
+.carts .cartlist .single {
+  flex: 1;
+  margin-bottom: 1.30666667rem;
+  overflow: auto;
+}
+.carts .cartlist .single .c-item {
+  margin-bottom: 0.26666667rem;
+  display: flex;
+  flex-direction: column;
+}
+.carts .cartlist .single .c-item .c-item-t {
+  height: 1.17333333rem;
+  background-color: white;
+  display: flex;
+}
+.carts .cartlist .single .c-item .c-item-t .c-t-l {
+  width: 1.2rem;
+  height: 100%;
+}
+.carts .cartlist .single .c-item .c-item-t .c-t-r {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.carts .cartlist .single .c-item .c-item-t .c-t-r .icon {
+  width: 0.58666667rem;
+  height: 0.48rem;
+  margin-right: 0.13333333rem;
+}
+.carts .cartlist .single .c-item .c-item-t .c-t-r .icon i {
+  font-size: 0.48rem;
+}
+.carts .cartlist .single .c-item .c-item-c {
+  height: 2.66666667rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid white;
+  display: flex;
+}
+.carts .cartlist .single .c-item .c-item-c .c-l {
+  width: 1.2rem;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-img {
+  width: 2.18666667rem;
+  height: 2.18666667rem;
+  margin-top: 0.13333333rem;
+  margin-bottom: 0.13333333rem;
+  margin-left: 0.13333333rem;
+  margin-right: 0.13333333rem;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-img img {
+  width: 100%;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r {
+  flex: 3;
+  padding-top: 0.26666667rem;
+  padding-bottom: 0.26666667rem;
+  padding-left: 0.26666667rem;
+  padding-right: 0.42666667rem;
+  text-align: left;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-name {
+  font-size: 0.32rem;
+  line-height: 1.4;
+  color: #474747;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-price {
+  margin-top: 0.64rem;
+  display: flex;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-price .c-price-l {
+  flex: 1;
+  font-size: 0.34666667rem;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-price .c-price-l .now {
+  color: #f5514d;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-price .c-price-l .del {
+  color: #cccccc;
+}
+.carts .cartlist .single .c-item .c-item-c .c-r .c-item-r .c-price .c-price-r {
+  font-size: 0.34666667rem;
+}
+.carts .cartlist .single .c-item .c-item-f {
+  height: 1.06666667rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.carts .cartlist .single .c-item .c-item-f .c-text {
+  font-size: 0.34666667rem;
+  color: #3a3a3a;
+}
+.carts .cartlist .single .c-item .c-item-f .total {
+  margin-top: 0.26666667rem;
+  margin-bottom: 0.26666667rem;
+  margin-left: 0.42666667rem;
+  margin-right: 0.42666667rem;
+  color: #f5514d;
+}
+.carts .cartlist .account {
+  width: 100%;
+  height: 1.30666667rem;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.carts .cartlist .account .account-l {
+  flex: 1;
+  display: flex;
+}
+.carts .cartlist .account .account-l .l-l {
+  width: 1.2rem;
+  height: 100%;
+}
+.carts .cartlist .account .account-l .l-c {
+  font-size: 0.34666667rem;
+  display: flex;
+  align-items: center;
+}
+.carts .cartlist .account .account-l .l-r {
+  flex: 1;
+  padding-right: 0.26666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.carts .cartlist .account .account-l .l-r .total-con {
+  font-size: 0.34666667rem;
+}
+.carts .cartlist .account .account-l .l-r .l-total {
+  color: #f5514d;
+  margin-left: 0.26666667rem;
+}
+.carts .cartlist .account .account-l .l-r .freight {
+  font-size: 0.32rem;
+  color: #cccccc;
+  margin-left: 0.26666667rem;
+}
+.carts .cartlist .account .account-r {
+  width: 2.66666667rem;
+  background-color: #ff6854;
+  color: white;
+  font-size: 0.48rem;
+  line-height: 1.28rem;
 }

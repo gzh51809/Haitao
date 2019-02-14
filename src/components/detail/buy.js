@@ -16,10 +16,11 @@ class Buy extends React.Component {
     changegoods(index,id){
         this.setState({
             goods:index,
+            num:1,
             goodsId:id
         })
     }
-    add(){
+    addnum(){
         this.setState({
             num:this.state.num+1
         })
@@ -30,6 +31,13 @@ class Buy extends React.Component {
                 num: this.state.num - 1
             })
         } 
+    }
+    // 恢复默认值
+    default(){
+        this.setState({
+            goods:0,
+            num: 1
+        })
     }
     componentDidMount() {
         this.setState({
@@ -67,20 +75,6 @@ class Buy extends React.Component {
                             }
                         })
                     }
-                        {/* <div className="b-img">
-                            <div className="b-img-l">
-                                <div className="b-image">
-                                    <div><img alt="" src="https://resource.51taouk.com/AdminImages/Product/6/1a1b78de-4edb-4522-b874-3b99ce5cbdbb.jpg" /></div>
-                                </div>
-                            </div>
-                            <div className="b-img-r">
-                                <div className="price">￡13.99</div>
-                                <div className="xuan">
-                                    <div>您选择了:一罐装</div>
-                                    <div>单独包装，不可和其他商品合并</div>
-                                </div>
-                            </div>
-                        </div> */}
                         <div className="xian"></div>
                     </div>
                     <div className="b-con-foot">
@@ -123,12 +117,11 @@ class Buy extends React.Component {
                                                 <div className="goodsnum">
                                                     <div>{this.state.num}</div>
                                                 </div>
-                                                <div className="add" onClick={this.add.bind(this)}>
+                                                <div className="add" onClick={this.addnum.bind(this)}>
                                                     <img alt="" src="https://m.51taouk.com/static/images/increment@3x.png" />
                                                 </div>
                                             </div>
-                                        }
-                                            
+                                        } 
                                         </div>
                                     </div>
                                     <div className="xian"></div>
@@ -141,10 +134,12 @@ class Buy extends React.Component {
                                 if(this.state.goods==0){
                                     let goods = {
                                         id:firstgoods[0].Id,
+                                        img: firstgoods[0].ImageUrl,
                                         name: firstgoods[0].Name,
-                                        price: firstgoods[0].Price,
-                                        oldprice: firstgoods[0].OldPrice,
-                                        qty:this.state.num
+                                        price: (firstgoods[0].Price).toFixed(2),
+                                        oldprice: (firstgoods[0].OldPrice).toFixed(2),
+                                        qty:this.state.num,
+                                        total: (firstgoods[0].Price*this.state.num).toFixed(2)
                                     }
                                     this.props.addCart(goods);
                                     buychange();
@@ -152,14 +147,18 @@ class Buy extends React.Component {
                                     let current = related.filter(item=>this.state.goodsId==item.Id);
                                     let goods = {
                                         id: current[0].Id,
-                                        name: current[0].Name,
-                                        price: current[0].Price,
-                                        oldprice: current[0].Price,
-                                        qty: this.state.num
+                                        img: current[0].ImageUrl,
+                                        name: current[0].ProductName,
+                                        price: (current[0].Price).toFixed(2),
+                                        oldprice: (current[0].Price).toFixed(2),
+                                        qty: this.state.num,
+                                        total: (current[0].Price * this.state.num).toFixed(2)
                                     }
                                     this.props.addCart(goods);
                                     buychange();
-                                }    
+                                }
+                                this.default();
+                                console.log("data",this.props);  
                             }}
                             >确定</div>
                         </div>
@@ -172,7 +171,11 @@ class Buy extends React.Component {
 function mapStateToProps(state, ownprops) {
     //state：redux中的state
     //ownprops: Cart组件自身的props
-    console.log(state);
+    let num =0;
+    state.cart.cartlist.forEach((item)=>{
+        num += item.qty;   
+    })
+    ownprops.getallnum(num);
     return {
         //将state中购物车页面的goodslist数据映射到props，
         //Cart组件中通过props.data访问
@@ -182,13 +185,11 @@ function mapStateToProps(state, ownprops) {
 function mapDispatchToProps(dispatch, ownprops) {
     // dispatch: redux中的dispatch方法
     // ownprops：同上
-    console.log(ownprops);
     return {
         addCart: (goods) => dispatch({
 				type:'addCart',
 				payload:goods
-			}),
-        // onRemoveGoods: (action) => dispatch(action),
+			})
     }
 }
 Buy = connect(mapStateToProps, mapDispatchToProps)(Buy);

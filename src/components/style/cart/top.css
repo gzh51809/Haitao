@@ -11,6 +11,9 @@
   min-width: 1.6rem;
   min-height: 0.8rem;
 }
+.top .hide {
+  display: none;
+}
 .top .center {
   font-size: 0.48rem;
   color: #ff9a8d;

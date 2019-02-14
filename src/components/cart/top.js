@@ -14,7 +14,9 @@ class Top extends React.Component {
             <div className="top">
                 <div className="left"></div>
                 <div className="center">购物车</div>
-                <div className="right"></div>
+                <div className="right">
+                    <div className={this.props.show?"":"hide"}>编辑</div>
+                </div>
             </div>
         )
     }

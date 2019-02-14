@@ -18,6 +18,20 @@
 .detail .d-top .d-l i {
   color: #b1b1b1;
 }
+.detail .d-top .d-l .ant-badge {
+  position: absolute;
+  right: 0.13333333rem;
+  top: 0.13333333rem;
+}
+.detail .d-top .d-l .ant-badge .ant-badge-multiple-words {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.13333333rem;
+  padding-right: 0.13333333rem;
+}
+.detail .d-top .d-l .ant-badge .ant-badge-count {
+  z-index: 2;
+}
 .detail .d-top .d-c {
   flex: 1;
   height: 100%;
