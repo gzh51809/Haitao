@@ -97,6 +97,47 @@
                                     .fs(13);
                                 }
                             }
+                            .c-num{
+                                .h(32);
+                                border-radius: 3px;
+                                display: flex;
+                                .opa{opacity: 0.5;}
+                                .c-sub,.c-add{
+                                    .w(40);
+                                    background-color: #eeeeee;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                .c-center{
+                                    flex: 1;
+                                    background-color: white;
+                                    display: flex;
+                                    align-items: center;
+                                    div{
+                                        flex: 1;
+                                        .lh(13);
+                                        text-align: center;
+                                        color: rgb(5, 27, 40);
+                                    }
+                                }
+                            }
+                            .c-del{
+                                .margin-t(10);
+                                display: flex;
+                                justify-content: flex-end;
+                                .c-del-icon{
+                                    .w(54);
+                                    .h(48);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    i{
+                                        .fs(20);
+                                        color: #ff6854;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -140,16 +181,20 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    .total-con{.fs(13);}
-                    .l-total{
-                        color: #f5514d;
-                        .margin-l(10);
+                    .l-r-con{
+                        display: flex;
+                        .total-con{.fs(13);}
+                        .l-total{
+                            color: #f5514d;
+                            .margin-l(10);
+                        }
+                        .freight{
+                            .fs(12);
+                            color: #cccccc;
+                            .margin-l(10);
+                        } 
                     }
-                    .freight{
-                        .fs(12);
-                        color: #cccccc;
-                        .margin-l(10);
-                    }
+                    
                 }
             }
             .account-r{
@@ -158,6 +203,21 @@
                 color: white;
                 .fs(18);
                 .lh(48);
+            }
+            .account-del{
+                .w(100);
+                .margin-r(16);
+                display: flex;
+                align-items: center;
+                .delete{
+                    width: 100%;
+                    .h(36);
+                    .lh(34);
+                    .fs(12);
+                    border: 1px solid #ff6854;
+                    border-radius: 4px;
+                    color: #ff6854;
+                }    
             }
         } 
     }

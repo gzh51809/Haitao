@@ -1,31 +1,50 @@
 // state默认值
 let defaultState = {
-    cartlist: [{
-        id: 254708,
-        img: "https://resource.51taouk.com/AdminImages/Product/6/1a1b78de-4edb-4522-b874-3b99ce5cbdbb.jpg",
-        name: "英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
-        price: 13.99,
-        oldprice: 19.99,
-        qty: 2,
-        total:27.98
-    }, {
-            id: 254709,
-            img: "https://resource.51taouk.com/AdminImages/Product/6/1a1b78de-4edb-4522-b874-3b99ce5cbdbb.jpg",
-            name: "英国原装爱他美 白金版 1段 0-6个月 奶粉800G",
-            price: 13.99,
-            oldprice: 19.99,
-            qty: 3,
-            total: 41.97
-        }],
+    cartlist: [],
     step: 0
 }
 let cartReducer = function (state = defaultState, action) {
-    // action{ type: 'xx', palyload: { xx } }
+    // action{ type: 'xx', palyload: {id,img,name,price,oldprice,qty,total} }
     switch (action.type) {
         case 'addCart':
             return {
                 ...state,
                 cartlist: [...state.cartlist, action.payload]
+            }
+        case 'updateCart':
+            // action{type:'xxx',payload:{id,qty,total}}
+            return {
+                ...state,
+                cartlist:state.cartlist.map((item)=>{
+                    if (item.id === action.payload.id){
+                        item.qty = action.payload.qty;
+                        item.total = action.payload.total
+                    }
+                    return item;
+                })
+            }
+        case 'removeCart':
+            // action{type:'xxx',payload:{id}}
+            return {
+                ...state,
+                cartlist: state.cartlist.filter(item => item.id !== action.payload.id)
+            }
+        case 'removeMoreCart':
+            // action{type:'xxx',payload:{id:[]}}
+            let list;
+            if (action.payload.id.length === state.cartlist.length){
+                list=[];
+            }else{
+                action.payload.id.forEach((id) => {
+                    state.cartlist =state.cartlist.filter((item) => {
+                        return item.id !== id;
+                    })
+                    list = state.cartlist;
+                })
+            }
+            return {
+                ...state,
+                cartlist:list
             }
         default:
             return state;

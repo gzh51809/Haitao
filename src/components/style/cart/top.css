@@ -11,6 +11,11 @@
   min-width: 1.6rem;
   min-height: 0.8rem;
 }
+.top .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .top .hide {
   display: none;
 }
